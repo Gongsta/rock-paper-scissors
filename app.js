@@ -21,7 +21,7 @@ function win(userChoice, computerChoice) {
 	const smallUserWord = "user".fontsize(3).sup();
 	const smallCompWord = "comp".fontsize(3).sup();
 	result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}. You win!`
-
+	document.getElementById(userChoice).classList.add('green-glow')
 }
 
 function convertToWord(letter) {
@@ -37,7 +37,7 @@ function lose(userChoice, computerChoice) {
 	const smallUserWord = "user".fontsize(3).sup();
 	const smallCompWord = "comp".fontsize(3).sup();
 	result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}. You lost...`
-
+	document.getElementById(userChoice).classList.add('red-glow')
 
 }
 function draw(userChoice, computerChoice) {
